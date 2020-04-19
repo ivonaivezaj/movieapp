@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MoviesService {
+  // API_KEY = 'a486995b02bc67cf6a8ae47a6d019bd5';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -13,4 +14,6 @@ export class MoviesService {
 
     return this.httpClient.get(url);
   }
+
+
 }
