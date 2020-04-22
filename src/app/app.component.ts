@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MoviesService } from './movies.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +7,8 @@ import { MoviesService } from './movies.service';
 })
 export class AppComponent {
   title = 'movieapp';
+  getKeys(obj) {
+    return Object.keys(obj)
+  }
 }
+
