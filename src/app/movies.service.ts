@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+<<<<<<< HEAD
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
+=======
+>>>>>>> c64862abcc4ec2d0a2bdc3ec3f17de2dcc7dce98
 
 @Injectable({
   providedIn: 'root'
 })
+<<<<<<< HEAD
 export class MovieService {
   API_KEY = 'a486995b02bc67cf6a8ae47a6d019bd5';
   
@@ -51,3 +55,18 @@ export class MovieService {
     return this.http.get(api);
   }
 }
+=======
+export class MoviesService {
+  // API_KEY = 'a486995b02bc67cf6a8ae47a6d019bd5';
+
+  constructor(private httpClient: HttpClient) { }
+
+  getData() {
+    const url = 'https://api.themoviedb.org/3/movie/550?api_key=a486995b02bc67cf6a8ae47a6d019bd5';
+
+    return this.httpClient.get(url);
+  }
+
+
+}
+>>>>>>> c64862abcc4ec2d0a2bdc3ec3f17de2dcc7dce98

@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '../movies.service';
 import { Location } from '@angular/common';
 import { LocalStorageService } from '../local-storage.service'
+=======
+import { MoviesService } from '../movies.service';
+>>>>>>> c64862abcc4ec2d0a2bdc3ec3f17de2dcc7dce98
 
 @Component({
   selector: 'app-movie-list',
@@ -10,6 +14,7 @@ import { LocalStorageService } from '../local-storage.service'
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
+<<<<<<< HEAD
   public movie;
   public genre;
   public showMore : boolean = false;
@@ -65,4 +70,18 @@ moreInfo(event) {
   ngOnInit(): void {
     this.getMovie();
   }
+=======
+  
+
+  constructor(private moviesService: MoviesService) { }
+  responseData;
+
+  ngOnInit(): void {
+    this.moviesService.getData().subscribe((response) => {
+      this.responseData = response;
+      console.log(this.responseData);
+    });
+  }
+
+>>>>>>> c64862abcc4ec2d0a2bdc3ec3f17de2dcc7dce98
 }

@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { MovieService } from '../movies.service';
 import { Subject } from 'rxjs/Subject';
 import { ActivatedRoute } from '@angular/router';
+=======
+>>>>>>> c64862abcc4ec2d0a2bdc3ec3f17de2dcc7dce98
 
 @Component({
   selector: 'app-search-criteria',
   templateUrl: './search-criteria.component.html',
+<<<<<<< HEAD
   styleUrls: ['./search-criteria.component.css'],
   providers: [ MovieService ]
 })
@@ -100,3 +104,15 @@ export class SearchCriteriaComponent implements OnInit {
   }
   }
 
+=======
+  styleUrls: ['./search-criteria.component.css']
+})
+export class SearchCriteriaComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+>>>>>>> c64862abcc4ec2d0a2bdc3ec3f17de2dcc7dce98

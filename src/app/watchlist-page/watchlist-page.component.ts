@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { LocalStorageService } from '../local-storage.service';
 import { MovieService } from '../movies.service';
 import { Router } from '@angular/router';
+=======
+>>>>>>> c64862abcc4ec2d0a2bdc3ec3f17de2dcc7dce98
 
 @Component({
   selector: 'app-watchlist-page',
@@ -9,6 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./watchlist-page.component.css']
 })
 export class WatchlistPageComponent implements OnInit {
+<<<<<<< HEAD
   favorites = [];
   movies = [];
 
@@ -45,3 +49,12 @@ export class WatchlistPageComponent implements OnInit {
   }
   }
 
+=======
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+>>>>>>> c64862abcc4ec2d0a2bdc3ec3f17de2dcc7dce98
