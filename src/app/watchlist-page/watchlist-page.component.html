@@ -1,5 +1,5 @@
 <main>
-    <div *ngIf="movies">
+    <div ngClass="movies">
         <span (click)="clearFavorites()" class="btn clear-all removeFromFavorites">Clear All Favorites<i class="fas fa-trash-alt icon"></i></span>
         <section class="movie-container">
             <div *ngFor="let movie of movies"class="movie-item">

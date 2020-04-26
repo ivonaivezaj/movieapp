@@ -2,12 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movies.service';
 import { Subject } from 'rxjs/Subject';
 import { ActivatedRoute } from '@angular/router';
+// import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-search-criteria',
   templateUrl: './search-criteria.component.html',
   styleUrls: ['./search-criteria.component.css'],
-  providers: [ MovieService ]
+  providers: [ MovieService ],
+  // animations: [
+  //   trigger('rotatedState', [
+  //     state('default', style({ transform: 'rotate(0'})),
+  //     state('rotated', style({ transform: 'rotate(-360deg)'})),
+  //     transition('rotated => default', animate('200ms ease-out')),
+  //     transition('default => rotated', animate('200ms eas-in'))
+  //   ])
+  // ]
 })
 export class SearchCriteriaComponent implements OnInit {
   searchTerms = new Subject<string>();
@@ -76,5 +85,11 @@ export class SearchCriteriaComponent implements OnInit {
       }
     });
   }
+
+  state: string = 'default';
+
+  // rotate() {
+  //   this.state = (this.state === 'default' ? 'rotated' : 'default');
+  // }
   }
 

@@ -38,6 +38,7 @@ export class WatchlistPageComponent implements OnInit {
 
   clearFavorites() {
     this.localStorageService.clearFavorites();
+    location.reload();
   }
 
   ngOnInit(): void {
