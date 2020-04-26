@@ -1,0 +1,47 @@
+.navbar-nav {
+    list-style: none;
+    padding-left: 0;  
+}
+
+h1 {
+    color: crimson;
+    font-size: 30px;
+}
+
+.navbar-nav a:hover {
+    color: rgb(255,133,25) !important;
+}
+
+.nav-icon {
+    font-size: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        padding-top: 30px;
+        width: 20%;
+    }
+    
+    .navbar-header {
+        padding-left: 10px;
+    }
+    
+    .nav-bar li {
+        padding: 10px;
+    }
+    
+    .navbar-nav li:hover {
+        background: rgb(59,95,154);
+        background: linear-gradient(90deg, rgba(59,95,154,1) 31%, rgba(255,255,255,0.046638638365502416) 98%); 
+        width: 96%;
+    }
+
+    .nav-icon {
+        display: none;
+    }
+}

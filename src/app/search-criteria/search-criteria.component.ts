@@ -12,8 +12,6 @@ import { ActivatedRoute } from '@angular/router';
 export class SearchCriteriaComponent implements OnInit {
   searchTerms = new Subject<string>();
   movies;
-  genre;
-  release_date;
   routTo: string
 
   constructor( private movieService: MovieService, public route: ActivatedRoute) {
@@ -23,39 +21,20 @@ export class SearchCriteriaComponent implements OnInit {
         err => console.log(err),
         () => console.log(this.movies)
     );
-
-    // this.movieService.search(this.searchTerms).subscribe(data => {
-    //   this.genre = data;
-    // },
-    // err => console.log(err),
-    // () => console.log(this.genre)
-    // );
-
-    // this.movieService.search(this.searchTerms).subscribe(data => {
-    //   this.release_date = data;
-    // },
-    // err => console.log(err),
-    // () => console.log(this.release_date)
-    // );
-  
   }
 
   getMovies() {
-    this.movieService.getMovies().subscribe(
-      data => {
+    this.movieService.getMovies().subscribe(data => {
         this.movies = data;
         console.log(data);
       },
       err => console.log(err),
       () => console.log(`success`)
     );
-
-
   }
 
   getPopular() {
-    this.movieService.getPopular().subscribe(
-      data => {
+    this.movieService.getPopular().subscribe(data => {
         this.movies = data;
         console.log(data);
       },
@@ -65,8 +44,7 @@ export class SearchCriteriaComponent implements OnInit {
   }
 
   getUpcoming() {
-    this.movieService.getUpcoming().subscribe(
-      data => {
+    this.movieService.getUpcoming().subscribe(data => {
         this.movies = data;
         console.log(data);
       },

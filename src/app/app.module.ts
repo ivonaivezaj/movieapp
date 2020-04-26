@@ -11,6 +11,7 @@ import { NavComponent } from './nav/nav.component';
 import { RouterModule } from '@angular/router';
 import { StorageServiceModule } from 'ngx-webstorage-service';
 import { LocalStorageService } from './local-storage.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { LocalStorageService } from './local-storage.service';
     HttpClientModule,
     FormsModule,
     StorageServiceModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule
   ],
   providers: [HttpClientModule, LocalStorageService],
   bootstrap: [AppComponent]

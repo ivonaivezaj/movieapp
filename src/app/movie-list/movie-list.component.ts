@@ -55,7 +55,7 @@ export class MovieListComponent implements OnInit {
     this.addedToFavorites = true;
   }
 
-moreInfo(event) {
+  moreInfo(event) {
   this.showMore = true;
   }
   goBack(): void {
