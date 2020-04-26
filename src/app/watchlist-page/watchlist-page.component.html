@@ -1,6 +1,6 @@
 <main>
     <div *ngIf="movies">
-        <h4 class="fav"> Favorites <span (click)="clearFavorites()" class="btn clear-all">clear <span class="remove"></span></span></h4>
+        <span (click)="clearFavorites()" class="btn clear-all removeFromFavorites">Clear All Favorites<i class="fas fa-trash-alt icon"></i></span>
         <section class="movie-container">
             <div *ngFor="let movie of movies"class="movie-item">
                 <a routerLink="/detail/{{movie.id}}">
