@@ -1,0 +1,14 @@
+.fav {
+    right: 0;
+    position: absolute;
+    width: 80%;
+}
+
+.icon {
+    margin: 2px;
+}
+
+.movie-details {
+    display: flex;
+    justify-content: space-between;
+}
