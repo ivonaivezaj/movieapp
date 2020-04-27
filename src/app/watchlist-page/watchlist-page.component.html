@@ -1,0 +1,19 @@
+<div class="logo">WATCH LIST</div>
+<div class="moviesDiv">
+  <div *ngFor="let movie of list" class="movieDiv">
+
+    <button class="" (click)="removeTask(movie)">Remove from Watchlist</button>
+    <div class="deleteMovies">
+      <i id='delete' (click)="removeTask(movie)" class="fas fa-times"></i>
+    </div>
+    <div class="imageDiv"><img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" class="img-fluid"
+        alt="{{ movie.title }}"></div>
+    <div class="textDiv">
+      <a [routerLink]="['/movie-detail', movie.id]" class="movieTitle">{{ movie.title }}</a>
+    </div>
+    <p class="voteAverage">
+      Rating:
+      {{movie.vote_average}}
+    </p>
+  </div>
+</div>
